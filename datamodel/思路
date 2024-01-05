@@ -1,0 +1,6 @@
+1、方法一直接在原始数据上建模，注意一定要处理一下fillna(0),否则出现梯度消失和梯度爆炸的问题
+2、方法二
+在kaggle的<predict stock prices With LSTM>(https://www.kaggle.com/code/pablocastilla/predict-stock-prices-with-lstm)
+这个模型中，大家的方案都是选择一只股票，然后对其时序进行建模。
+所以每个LSTM模型都是针对这一个股票，各个股票之间的数据相互独立。
+这里的方案，我考虑将数据线进行分类，看看能不能根据股票的基本数据把它们先进行一个聚类操作，然后根据每类股票的分类数再进行LSTM建模
