@@ -229,7 +229,7 @@ feature_nparr = np.array(feature_names_in_)
 scaler = joblib.load('rawdata_minmax_scaler.pkl')
 scaler.feature_names_in_ = feature_nparr #这里保证序列特征序列顺序即可，不加也可以，保存的scaler没有特征列名
 predict_scaler = joblib.load('predict_minmax_scaler.pkl')
-df = get_stock_buy('2024-01-10')
+df = get_stock_buy('2024-01-17')
 if df.empty :
     print('当日没有买入')
 else:
